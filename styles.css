@@ -688,6 +688,40 @@ body {
   color: #fff;
 }
 
+#backToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 100;
+  font-size: 20px;
+  background-color: #0d47a1;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: opacity 0.3s;
+}
+
+#backToTopBtn:hover {
+  background-color: #08306b;
+}
+
+.programs-section .section-title {
+  color: #0d47a1;
+  font-weight: 800;
+}
+
+.program-icon i {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+
  .cookie-banner {
         position: fixed;
         bottom: 20px;
@@ -737,49 +771,6 @@ body {
 .toggle-btn:hover,
 .toggle-btn.active {
   background-color: #000000;
-}
-
-.table-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #fdfdfd;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
-.table-wrapper {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-.responsive-table {
-  overflow-x: auto;
-  width: 100%;
-}
-table {
-  width: 100%;
-  min-width: 600px; /* ensure it's scrollable on small screens */
-}
-
-
-th, td {
-  padding: 12px;
-  border-bottom: 1px solid #ccc;
-  text-align: left;
-}
-
-thead {
-  background-color: #f4f4f4;
 }
 
   /*End of Wallet*/

@@ -143,3 +143,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener('scroll', checkCountersInView);
 
+
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  backToTopBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+
+  
+  const buttons = document.querySelectorAll('.donate-btn');
+  const input = document.querySelector('input[type="number"]');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const value = button.textContent.replace('KES', '').replace(',', '').trim();
+      if (!isNaN(value)) input.value = value;
+    });
+  });
+
+
+  
+  const donateButton = document.querySelector('button[type="submit"]');
+  donateButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('thankyouModal').classList.remove('hidden');
+  });
+
+
+  
